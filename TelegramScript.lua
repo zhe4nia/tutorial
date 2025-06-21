@@ -7,7 +7,7 @@ Telegram.token=''
 if success then
 	Telegram.token=data
 else
-	warn('token not found')
+	warn('token not found',data)
 end
 function Telegram.SendMessage(msg:string)
 	if Telegram.token=='' then return end
@@ -26,7 +26,6 @@ function Telegram.SendMessage(msg:string)
 			text=msg
 		})
 	})
-	print(response)
 end
 
 function Telegram.PlayerJoined(plr:Player)
